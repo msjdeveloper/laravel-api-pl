@@ -30,5 +30,10 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'sport_score' => [
+        'key' => env('SPORT_SCORE_KEY'),
+        'host' => env('SPORT_SCORE_HOST'),
+        'baseUrl' => env('SPORT_SCORE_BASE_URL')
+    ]
 
 ];
