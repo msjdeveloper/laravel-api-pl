@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\SportScore\Facade\SportScore;
 use App\Services\SportScore\SportScoreService;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
@@ -15,7 +16,7 @@ class Playground extends Command
 
     public function handle()
     {
-        $service = new SportScoreService();
+        // $service = new SportScoreService();
         // $json = $service
         //     ->sports()
         //     ->get();
@@ -23,8 +24,7 @@ class Playground extends Command
         // $a = $json->first();
         // dd($a->name);
 
-        $json = $service
-            ->teams()
+        $json = SportScore::teams()
             ->fromSport(1)
             ->get();
 
